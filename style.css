@@ -11,7 +11,7 @@ body {
 #toggleSidebar {
     position: fixed;
     top: 20px;
-    right: 20px;
+    left: 20px;
     font-size: 24px;
     background-color: #333;
     color: white;
@@ -31,10 +31,10 @@ body {
     height: 100vh;
     position: fixed;
     top: 0;
-    right: 0;
+    left: 0;
     background-color: #f8f8f8;
     padding: 30px 20px;
-    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
     transition: width 0.3s ease;
     overflow: hidden;
 }
@@ -69,8 +69,17 @@ body {
 
 /* 主內容 */
 main {
+    margin-left: 200px; /* 預留側欄的空間 */
     padding: 20px;
-    margin-right: 220px; /* 預留側欄的空間 */
+    transition: margin-left 0.3s ease;
+}
+
+main.expanded {
+    margin-left: 200px; /* 展開狀態的右邊距 */
+}
+
+main.collapsed {
+    margin-left: 20px; /* 收縮狀態的右邊距 */
 }
 
 main section {
@@ -96,4 +105,3 @@ footer {
 footer p {
     margin: 0;
 }
-
