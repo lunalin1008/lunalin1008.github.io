@@ -1,9 +1,10 @@
 /* 基本樣式 */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f5f5f5;
+    color: #333;
 }
 
 /* 標題和圖片 */
@@ -11,12 +12,15 @@ header {
     background-color: #fff;
     border-bottom: 1px solid #ddd;
     padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .container {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .profile-header {
@@ -26,22 +30,35 @@ header {
 
 .profile-photo {
     border-radius: 50%;
-    width: 100px;
-    height: 100px;
+    width: 120px;
+    height: 120px;
     margin-right: 20px;
+    border: 4px solid #e0e0e0;
+    object-fit: cover;
+}
+
+.profile-info h1 {
+    margin: 0;
+    font-size: 2em;
+    color: #333;
+}
+
+.profile-info .title {
+    margin: 0;
+    font-size: 1.2em;
+    color: #666;
 }
 
 .sidebar {
     position: fixed;
     top: 0;
     left: 0;
-    width: 200px;
+    width: 250px;
     height: 100%;
     background-color: #333;
     color: #fff;
     padding: 20px;
-    display: flex;
-    flex-direction: column;
+    box-shadow: 2px 0 4px rgba(0, 0, 0, 0.1);
 }
 
 .sidebar ul {
@@ -57,15 +74,26 @@ header {
     color: #fff;
     text-decoration: none;
     font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.sidebar ul li a:hover {
+    color: #ff8c00;
 }
 
 main {
-    margin-left: 220px; /* Adjust this if the sidebar width changes */
+    margin-left: 270px; /* Adjust this if the sidebar width changes */
     padding: 20px;
+    max-width: 900px;
+    margin: 20px auto;
 }
 
-section {
-    margin-bottom: 40px;
+.section {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 footer {
@@ -73,4 +101,15 @@ footer {
     border-top: 1px solid #ddd;
     padding: 10px;
     text-align: center;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        width: 200px;
+    }
+
+    main {
+        margin-left: 220px;
+    }
 }
