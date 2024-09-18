@@ -7,9 +7,27 @@ body {
     color: #333;
 }
 
-/* 側邊欄 */
+/* 側欄位按鈕樣式 */
+#toggleSidebar {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    font-size: 24px;
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+#toggleSidebar:hover {
+    background-color: #555;
+}
+
+/* 側欄收縮/展開樣式 */
 .sidebar {
-    width: 180px;
+    width: 200px;
     height: 100vh;
     position: fixed;
     top: 0;
@@ -17,33 +35,24 @@ body {
     background-color: #f8f8f8;
     padding: 30px 20px;
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    transition: width 0.3s ease;
 }
 
-.sidebar ul {
-    list-style: none;
+.sidebar.collapsed {
+    width: 0;
     padding: 0;
-    margin: 0;
+    overflow: hidden;
 }
 
-.sidebar ul li {
-    margin-bottom: 30px;
-}
-
-.sidebar ul li a {
-    text-decoration: none;
-    font-size: 16px;
-    color: #333;
-    transition: color 0.3s ease;
-}
-
-.sidebar ul li a:hover {
-    color: #000;
-}
-
-/* 內容區 */
+/* 內容區調整 */
 .content {
-    margin-left: 200px;
+    margin-left: 220px;
     padding: 50px;
+    transition: margin-left 0.3s ease;
+}
+
+.content.collapsed {
+    margin-left: 20px;
 }
 
 section {
@@ -69,19 +78,4 @@ section img {
     max-width: 1000px;
     margin: 20px 0;
     display: block;
-}
-
-/* 按鈕或互動元素 */
-button {
-    padding: 10px 20px;
-    border: none;
-    background-color: #333;
-    color: white;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-button:hover {
-    background-color: #000;
 }
