@@ -3,47 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>客戶履歷展示網站</title>
+    <title>個人履歷及專案展示</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <aside id="sidebar">
-            <div class="toggle-btn" onclick="toggleSidebar()">
-                <span>&#9776;</span>
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="#home">主頁</a></li>
-                    <li><a href="#projects">過往專案</a></li>
-                    <li><a href="#contact">聯繫方式</a></li>
-                </ul>
-            </nav>
-        </aside>
+    <div class="sidebar" id="sidebar">
+        <div class="toggle-btn" onclick="toggleSidebar()">&#9776;</div>
+        <ul>
+            <li><a href="#home">主頁</a></li>
+            <li><a href="#projects">過往專案</a></li>
+            <li><a href="#contact">聯繫方式</a></li>
+        </ul>
+    </div>
 
-        <main>
-            <section id="home" class="section">
-                <h1>歡迎來到我的履歷網站</h1>
-                <p>這裡展示我的經歷和專案。</p>
-            </section>
+    <div class="main-content">
+        <section id="home">
+            <h1>個人履歷</h1>
+            <p>這裡展示你的履歷內容...</p>
+        </section>
 
-            <section id="projects" class="section">
-                <h2>過往專案</h2>
-                <p>以下是我過去完成的一些專案展示...</p>
-                <!-- 幾何元素和圖片可在這裡顯示 -->
-            </section>
+        <section id="projects">
+            <h2>過往專案</h2>
+            <p>這裡展示你的過往專案詳情...</p>
+        </section>
 
-            <section id="contact" class="section">
-                <h2>聯繫方式</h2>
-                <p>請通過以下方式與我聯繫。</p>
-                <form>
-                    <input type="text" placeholder="姓名" required>
-                    <input type="email" placeholder="電子郵件" required>
-                    <textarea placeholder="訊息" required></textarea>
-                    <button type="submit">發送訊息</button>
-                </form>
-            </section>
-        </main>
+        <section id="contact">
+            <h2>聯繫方式</h2>
+            <p>這裡展示聯繫資訊...</p>
+        </section>
     </div>
 
     <script src="script.js"></script>
