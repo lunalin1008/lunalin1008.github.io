@@ -1,40 +1,12 @@
-/* 基礎設置 */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'Poppins', sans-serif;
-    background-color: #f5f5dc; /* 米色背景 */
-    color: #333;
-    line-height: 1.6;
-}
-
-h1, h2, h3 {
-    color: #333;
-}
-
-a {
-    text-decoration: none;
-    color: #0077cc;
-}
-
-section {
-    padding: 60px 20px;
-    text-align: center;
-}
-
 .sidebar {
     height: 100%;
-    width: 250px;
+    width: 250px; /* 初始展開寬度 */
     position: fixed;
     top: 0;
     left: 0;
     background-color: #333;
     padding-top: 20px;
-    transition: width 0.3s;
+    transition: width 0.3s ease; /* 增加動畫效果 */
     color: white;
 }
 
@@ -46,6 +18,11 @@ section {
     color: white;
     padding: 10px;
     cursor: pointer;
+}
+
+.main-content {
+    margin-left: 250px; /* 與側邊欄初始寬度保持一致 */
+    transition: margin-left 0.3s ease; /* 使主內容與側邊欄同步縮放 */
 }
 
 .sidebar ul {
@@ -62,123 +39,3 @@ section {
     font-size: 18px;
     text-transform: uppercase;
 }
-
-.main-content {
-    margin-left: 250px;
-    transition: margin-left 0.3s;
-    padding: 20px;
-}
-
-/* 首頁風格 */
-.home-section {
-    height: 100vh;
-    background: linear-gradient(135deg, #ececec, #f5f5dc); /* 幾何圖形風格漸變 */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-}
-
-.home-section:before {
-    content: "";
-    position: absolute;
-    top: 10%;
-    left: 0;
-    width: 250px;
-    height: 250px;
-    background-color: rgba(0, 0, 0, 0.05);
-    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
-}
-
-.text-container {
-    z-index: 1;
-}
-
-h1 {
-    font-size: 48px;
-    color: #333;
-    margin-bottom: 20px;
-}
-
-p {
-    font-size: 20px;
-    margin-bottom: 30px;
-}
-
-.cta-btn {
-    padding: 10px 20px;
-    background-color: #0077cc;
-    color: white;
-    border-radius: 5px;
-    text-transform: uppercase;
-    font-weight: 600;
-}
-
-/* 過往專案區域風格 */
-.projects-section {
-    background-color: #fdfdfd;
-}
-
-.project-grid {
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-}
-
-.project-item {
-    background-color: #f5f5dc;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    width: 30%;
-}
-
-.project-item h3 {
-    font-size: 24px;
-    margin-bottom: 15px;
-}
-
-.project-item p {
-    font-size: 16px;
-}
-
-/* 聯繫區域風格 */
-.contact-section {
-    background-color: #f1f1f1;
-}
-
-form {
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-input, textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 20px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-}
-
-button {
-    padding: 10px 20px;
-    background-color: #0077cc;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-/* 幾何圖形增強 */
-.projects-section:before {
-    content: "";
-    position: absolute;
-    bottom: 5%;
-    right: 5%;
-    width: 150px;
-    height: 150px;
-    background-color: rgba(0, 0, 0, 0.05);
-    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
-}
-
-.
