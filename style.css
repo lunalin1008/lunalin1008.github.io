@@ -1,3 +1,4 @@
+/* 基礎設置 */
 * {
     margin: 0;
     padding: 0;
@@ -5,9 +6,24 @@
 }
 
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Poppins', sans-serif;
     background-color: #f5f5dc; /* 米色背景 */
     color: #333;
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    color: #333;
+}
+
+a {
+    text-decoration: none;
+    color: #0077cc;
+}
+
+section {
+    padding: 60px 20px;
+    text-align: center;
 }
 
 .sidebar {
@@ -19,6 +35,7 @@ body {
     background-color: #333;
     padding-top: 20px;
     transition: width 0.3s;
+    color: white;
 }
 
 .sidebar .toggle-btn {
@@ -42,33 +59,64 @@ body {
 
 .sidebar ul li a {
     color: white;
-    text-decoration: none;
     font-size: 18px;
+    text-transform: uppercase;
 }
 
 .main-content {
     margin-left: 250px;
-    padding: 20px;
     transition: margin-left 0.3s;
+    padding: 20px;
 }
 
-h1, h2 {
-    margin-bottom: 20px;
+/* 首頁風格 */
+.home-section {
+    height: 100vh;
+    background: linear-gradient(135deg, #ececec, #f5f5dc); /* 幾何圖形風格漸變 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
 }
 
-section {
-    margin-bottom: 50px;
-}
-
-/* 幾何元素 */
-.main-content:before {
+.home-section:before {
     content: "";
     position: absolute;
     top: 10%;
-    right: 5%;
-    width: 150px;
-    height: 150px;
+    left: 0;
+    width: 250px;
+    height: 250px;
     background-color: rgba(0, 0, 0, 0.05);
     clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
-    z-index: -1;
 }
+
+.text-container {
+    z-index: 1;
+}
+
+h1 {
+    font-size: 48px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.cta-btn {
+    padding: 10px 20px;
+    background-color: #0077cc;
+    color: white;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+/* 過往專案區域風格 */
+.projects-section {
+    background-color: #fdfdfd;
+}
+
+.
