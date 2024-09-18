@@ -7,53 +7,73 @@ body {
     background-color: #f4f4f4;
 }
 
-/* 容器 */
-.container {
-    width: 80%;
-    margin: 0 auto;
+/* 側欄位按鈕樣式 */
+#toggleSidebar {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    font-size: 24px;
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+#toggleSidebar:hover {
+    background-color: #555;
+}
+
+/* 側欄位樣式 */
+.sidebar {
+    width: 200px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: #f8f8f8;
+    padding: 30px 20px;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+    transition: width 0.3s ease;
     overflow: hidden;
 }
 
-/* 標題和導航 */
-header {
-    background: #333;
-    color: #fff;
-    padding: 10px 0;
-}
-
-header h1 {
-    float: left;
-    margin: 0;
-}
-
-nav ul {
-    float: right;
-    list-style: none;
-    margin: 0;
+/* 側欄收縮狀態 */
+.sidebar.collapsed {
+    width: 0;
     padding: 0;
+    box-shadow: none;
 }
 
-nav ul li {
-    display: inline;
-    margin-left: 20px;
+/* 側欄按鈕樣式 */
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
-nav ul li a {
-    color: #fff;
+.sidebar ul li {
+    margin-bottom: 20px;
+}
+
+.sidebar ul li a {
     text-decoration: none;
+    color: #333;
     font-weight: bold;
 }
 
-nav ul li a:hover {
+.sidebar ul li a:hover {
     text-decoration: underline;
 }
 
 /* 主內容 */
 main {
-    padding: 20px 0;
+    padding: 20px;
+    margin-right: 220px; /* 預留側欄的空間 */
 }
 
-section {
+main section {
     background: #fff;
     padding: 20px;
     margin-bottom: 20px;
@@ -76,3 +96,4 @@ footer {
 footer p {
     margin: 0;
 }
+
