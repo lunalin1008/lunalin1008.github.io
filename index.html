@@ -3,61 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>類似 Lunyyiny 的網站</title>
+    <title>客戶履歷展示網站</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <div class="logo">
-            <a href="#">Lunyyiny</a>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="#section1">首頁</a></li>
-                <li><a href="#section2">關於我們</a></li>
-                <li><a href="#section3">畫廊</a></li>
-                <li><a href="#section4">聯繫我們</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <main>
-        <section id="section1" class="hero">
-            <div class="hero-text">
-                <h1>歡迎來到 Lunyyiny</h1>
-                <p>探索創意的美麗</p>
+    <div class="container">
+        <aside id="sidebar">
+            <div class="toggle-btn" onclick="toggleSidebar()">
+                <span>&#9776;</span>
             </div>
-        </section>
+            <nav>
+                <ul>
+                    <li><a href="#home">主頁</a></li>
+                    <li><a href="#projects">過往專案</a></li>
+                    <li><a href="#contact">聯繫方式</a></li>
+                </ul>
+            </nav>
+        </aside>
 
-        <section id="section2" class="about">
-            <h2>關於我們</h2>
-            <p>我們致力於將最優秀的藝術帶給全世界...</p>
-        </section>
+        <main>
+            <section id="home" class="section">
+                <h1>歡迎來到我的履歷網站</h1>
+                <p>這裡展示我的經歷和專案。</p>
+            </section>
 
-        <section id="section3" class="gallery">
-            <h2>畫廊</h2>
-            <div class="gallery-grid">
-                <img src="image1.jpg" alt="藝術品 1">
-                <img src="image2.jpg" alt="藝術品 2">
-                <img src="image3.jpg" alt="藝術品 3">
-                <img src="image4.jpg" alt="藝術品 4">
-            </div>
-        </section>
+            <section id="projects" class="section">
+                <h2>過往專案</h2>
+                <p>以下是我過去完成的一些專案展示...</p>
+                <!-- 幾何元素和圖片可在這裡顯示 -->
+            </section>
 
-        <section id="section4" class="contact">
-            <h2>聯繫我們</h2>
-            <form action="#">
-                <input type="text" name="name" placeholder="你的名字" required>
-                <input type="email" name="email" placeholder="你的電子郵件" required>
-                <textarea name="message" placeholder="你的訊息" required></textarea>
-                <button type="submit">發送</button>
-            </form>
-        </section>
-    </main>
-
-    <footer>
-        <p>&copy; 2024 Lunyyiny. 版權所有。</p>
-    </footer>
+            <section id="contact" class="section">
+                <h2>聯繫方式</h2>
+                <p>請通過以下方式與我聯繫。</p>
+                <form>
+                    <input type="text" placeholder="姓名" required>
+                    <input type="email" placeholder="電子郵件" required>
+                    <textarea placeholder="訊息" required></textarea>
+                    <button type="submit">發送訊息</button>
+                </form>
+            </section>
+        </main>
+    </div>
 
     <script src="script.js"></script>
 </body>
