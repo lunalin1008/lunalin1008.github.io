@@ -1,12 +1,3 @@
-/* 背景與排版 */
-body {
-    font-family: 'Helvetica', 'Arial', sans-serif;
-    background-color: white;
-    margin: 0;
-    padding: 0;
-    color: #333;
-}
-
 /* 側欄位按鈕樣式 */
 #toggleSidebar {
     position: fixed;
@@ -38,6 +29,7 @@ body {
     transition: width 0.3s ease;
 }
 
+/* 初始狀態設定為收縮 */
 .sidebar.collapsed {
     width: 0;
     padding: 0;
