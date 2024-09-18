@@ -1,25 +1,54 @@
 <!DOCTYPE html>
-<html lang="zh-Hant">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>主頁</title>
-    <link rel="stylesheet" href="style.css">
+    <title>個人履歷</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="sidebar" id="sidebar">
-        <div class="toggle-btn" onclick="toggleSidebar()">&#9776;</div>
-        <ul id="sidebar-menu">
-            <li><a href="index.html">主頁</a></li>
-            <li><a href="projects.html">過往專案</a></li>
-            <li><a href="contact.html">聯繫方式</a></li>
-        </ul>
-    </div>
+    <header>
+        <div class="container">
+            <div class="profile-header">
+                <img src="path/to/your/photo.jpg" alt="Personal Photo" class="profile-photo">
+                <h1>你的名字</h1>
+                <p>你的職業</p>
+            </div>
+            <nav class="sidebar">
+                <ul>
+                    <li><a href="#home">首頁</a></li>
+                    <li><a href="#resume">履歷</a></li>
+                    <li><a href="#projects">專案</a></li>
+                    <li><a href="#contact">聯繫</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-    <div class="main-content">
-        <h1>歡迎來到主頁</h1>
-    </div>
+    <main>
+        <section id="home">
+            <h2>首頁</h2>
+            <p>簡要介紹你自己。</p>
+        </section>
 
-    <script src="script.js"></script>
+        <section id="resume">
+            <h2>履歷</h2>
+            <p>詳細的履歷信息。</p>
+        </section>
+
+        <section id="projects">
+            <h2>專案</h2>
+            <p>展示你的專案。</p>
+        </section>
+
+        <section id="contact">
+            <h2>聯繫</h2>
+            <p>提供你的聯繫方式。</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 你的名字</p>
+    </footer>
 </body>
 </html>
