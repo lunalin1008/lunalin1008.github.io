@@ -4,9 +4,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // 初始狀態設定
     if (sidebar.classList.contains('collapsed')) {
-        content.style.marginRight = '20px'; // 收縮時內容區域的右邊距
+        content.classList.add('collapsed'); // 收縮時內容區域的左邊距
     } else {
-        content.style.marginRight = '220px'; // 展開時內容區域的右邊距
+        content.classList.add('expanded'); // 展開時內容區域的左邊距
     }
 });
 
@@ -15,11 +15,6 @@ document.getElementById('toggleSidebar').addEventListener('click', function() {
     var content = document.querySelector('main');
 
     sidebar.classList.toggle('collapsed');
-
-    if (sidebar.classList.contains('collapsed')) {
-        content.style.marginRight = '20px'; // 收縮時內容區域的右邊距
-    } else {
-        content.style.marginRight = '220px'; // 展開時內容區域的右邊距
-    }
+    content.classList.toggle('collapsed');
+    content.classList.toggle('expanded');
 });
-
