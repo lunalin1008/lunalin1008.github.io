@@ -7,20 +7,19 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <div class="container">
-            <h1>我的展示網站</h1>
-            <nav>
-                <ul>
-                    <li><a href="#home">首頁</a></li>
-                    <li><a href="#about">關於我們</a></li>
-                    <li><a href="#services">服務</a></li>
-                    <li><a href="#contact">聯絡我們</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+    <!-- 側欄位按鈕 -->
+    <button id="toggleSidebar">☰</button>
 
+    <!-- 側欄內容 -->
+    <div class="sidebar collapsed" id="sidebar">
+        <ul>
+            <li><a href="#home">首頁</a></li>
+            <li><a href="#projects">過往專案</a></li>
+            <li><a href="#contact">聯絡我</a></li>
+        </ul>
+    </div>
+
+    <!-- 主內容 -->
     <main>
         <section id="home">
             <div class="container">
@@ -29,17 +28,10 @@
             </div>
         </section>
 
-        <section id="about">
+        <section id="projects">
             <div class="container">
-                <h2>關於我們</h2>
-                <p>這裡是關於我們的內容...</p>
-            </div>
-        </section>
-
-        <section id="services">
-            <div class="container">
-                <h2>服務</h2>
-                <p>這裡是我們提供的服務內容...</p>
+                <h2>過往專案</h2>
+                <p>這裡是過往專案的內容...</p>
             </div>
         </section>
 
