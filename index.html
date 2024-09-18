@@ -1,54 +1,28 @@
 <!DOCTYPE html>
-<html lang="zh-TW">
+<html lang="zh">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>我的展示網站</title>
-    <link rel="stylesheet" href="style.css">
+    <title>個人履歷</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- 側欄位按鈕 -->
-    <button id="toggleSidebar">☰</button>
-
-    <!-- 側欄內容 -->
-    <div class="sidebar collapsed" id="sidebar">
-        <ul>
-            <li><a href="#home">首頁</a></li>
-            <li><a href="#projects">過往專案</a></li>
-            <li><a href="#contact">聯絡我</a></li>
-        </ul>
+    <div class="sidebar">
+        <a href="#home">首頁</a>
+        <a href="#projects">項目</a>
+        <a href="#contact">聯繫方式</a>
     </div>
 
-    <!-- 主內容 -->
-    <main>
-        <section id="home">
-            <div class="container">
-                <h2>歡迎來到我們的網站</h2>
-                <p>這是首頁的內容...</p>
-            </div>
-        </section>
+    <div class="main">
+        <button class="toggle-btn" onclick="toggleSidebar()">☰</button>
+        <h1>歡迎來到我的履歷網站</h1>
+        <p>這裡是我的個人介紹和項目展示。</p>
+    </div>
 
-        <section id="projects">
-            <div class="container">
-                <h2>過往專案</h2>
-                <p>這裡是過往專案的內容...</p>
-            </div>
-        </section>
-
-        <section id="contact">
-            <div class="container">
-                <h2>聯絡我們</h2>
-                <p>這裡是聯絡我們的內容...</p>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <div class="container">
-            <p>© 2024 我的展示網站. 版權所有.</p>
-        </div>
-    </footer>
-
-    <script src="script.js"></script>
+    <script>
+        function toggleSidebar() {
+            document.body.classList.toggle('collapsed');
+        }
+    </script>
 </body>
 </html>
